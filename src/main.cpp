@@ -10,21 +10,6 @@ int main(int argc, char** argv)
 {
     if (false) {
 
-        std::ifstream file("flights.txt");
-        std::stringstream buffer {};
-        buffer << file.rdbuf();
-        std::string txt { buffer.str() };
-
-        std::regex pattern(R"(duration:(\d+)h(\d+)?m?)");
-        std::smatch match;
-
-        while (std::regex_search(txt, match, pattern)) {
-            if (!match[2].str().empty())
-                std::cout << match[1] << " " << std::stoi(match[2]) << std::endl;
-
-            txt = match.suffix().str();
-        }
-
     } else {
         ::testing::InitGoogleTest(&argc, argv);
         std::cout << "RUNNING TESTS ..." << std::endl;
