@@ -6,7 +6,6 @@
 #include <regex>
 #include <sstream>
 #include <string>
-#include <typeinfo>
 #include <vector>
 
 // // Name, Surname, Age, Smokes, AreaQ, Alkhol
@@ -14,7 +13,7 @@
 namespace q2 {
 
 struct Patient {
-    Patient(const std::string _name, const std::string _surname, const size_t _age, const size_t _smokes, const size_t _area_q, const size_t _alkhol)
+    Patient(const std::string& _name, const std::string& _surname, const size_t& _age, const size_t& _smokes, const size_t& _area_q, const size_t& _alkhol)
         : name { _name + " " + _surname }
         , age { _age }
         , smokes { _smokes }
