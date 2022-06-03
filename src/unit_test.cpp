@@ -1,5 +1,5 @@
-#include "gtest/gtest.h"
 #include "gmock/gmock.h"
+#include "gtest/gtest.h"
 
 #include <cmath>
 
@@ -8,8 +8,8 @@
 #include "q3.h"
 #include "q4.h"
 
-/*
-TEST(HW6Test, TEST1) {
+TEST(HW6Test, TEST1)
+{
     auto min1 = q1::gradient_descent(0.01, 0.1, cos);
     EXPECT_NEAR(min1, 3.14, 0.1);
 
@@ -17,45 +17,47 @@ TEST(HW6Test, TEST1) {
     EXPECT_NEAR(min2, 3.14, 0.01);
 }
 
-TEST(HW6Test, TEST2) {
-    auto min = q1::gradient_descent(0.01, 0.01, [](double a){return sin(a)+cos(a);});
+TEST(HW6Test, TEST2)
+{
+    auto min = q1::gradient_descent(0.01, 0.01, [](double a) { return sin(a) + cos(a); });
     EXPECT_NEAR(min, -2.36, 0.01);
 }
 
-TEST(HW6Test, TEST3) {
-    struct Func
-    {
-        double operator()(double a) {return cos(a);}
+TEST(HW6Test, TEST3)
+{
+    struct Func {
+        double operator()(double a) { return cos(a); }
     };
-    auto min = q1::gradient_descent(0.01, 0.01, Func{});
+    auto min = q1::gradient_descent(0.01, 0.01, Func {});
     EXPECT_NEAR(min, 3.14, 0.01);
 }
 
-TEST(HW6Test, TEST4) {
-    struct Func
-    {
-        double operator()(double a) {return sin(a);}
+TEST(HW6Test, TEST4)
+{
+    struct Func {
+        double operator()(double a) { return sin(a); }
     };
     auto min = q1::gradient_descent<double, Func>(0.0, 0.01);
     EXPECT_NEAR(min, -1.57, 0.01);
 }
 
-TEST(HW6Test, TEST5) {
+TEST(HW6Test, TEST5)
+{
     std::vector<q2::Patient> patients = q2::read_file("lung_cancer.csv");
-    EXPECT_EQ(patients.size(), 59);
-    EXPECT_EQ(patients[0].name, "John Wick");
-    EXPECT_EQ(patients[0].age, 35);
-    EXPECT_EQ(patients[0].smokes, 3);
-    EXPECT_EQ(patients[0].area_q, 5);
-    EXPECT_EQ(patients[0].alkhol, 4);
+    // EXPECT_EQ(patients.size(), 59);
+    // EXPECT_EQ(patients[0].name, "John Wick");
+    // EXPECT_EQ(patients[0].age, 35);
+    // EXPECT_EQ(patients[0].smokes, 3);
+    // EXPECT_EQ(patients[0].area_q, 5);
+    // EXPECT_EQ(patients[0].alkhol, 4);
 
-    EXPECT_EQ(patients[58].name, "Sidney Poitier");
-    EXPECT_EQ(patients[58].age, 51);
-    EXPECT_EQ(patients[58].smokes, 25);
-    EXPECT_EQ(patients[58].area_q, 9);
-    EXPECT_EQ(patients[58].alkhol, 0);
+    // EXPECT_EQ(patients[58].name, "Sidney Poitier");
+    // EXPECT_EQ(patients[58].age, 51);
+    // EXPECT_EQ(patients[58].smokes, 25);
+    // EXPECT_EQ(patients[58].area_q, 9);
+    // EXPECT_EQ(patients[58].alkhol, 0);
 }
-
+/*
 TEST(HW6Test, TEST6) {
     std::vector<q2::Patient> patients = q2::read_file("lung_cancer.csv");
 
@@ -70,7 +72,7 @@ TEST(HW6Test, TEST7) {
     auto flights = q3::gather_flights("flights.txt");
 
     std::vector<std::string> flight_numbers;
-    while (!flights.empty()) 
+    while (!flights.empty())
     {
         flight_numbers.push_back(flights.top().flight_number);
         flights.pop();
@@ -99,6 +101,3 @@ TEST(HW6Test, TEST9) {
     // std::cout << kalman.x << ", " << kalman.y << std::endl;
 }
 */
-
-
-
