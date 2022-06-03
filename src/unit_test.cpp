@@ -40,10 +40,11 @@ TEST(HW6Test, TEST4)
     auto min = q1::gradient_descent<double, Func>(0.0, 0.01);
     EXPECT_NEAR(min, -1.57, 0.01);
 }
-
+/*
 TEST(HW6Test, TEST5)
 {
-    std::vector<q2::Patient> patients = q2::read_file("lung_cancer.csv");
+    // std::vector<q2::Patient> patients =
+    q2::read_file("lung_cancer.csv");
     // EXPECT_EQ(patients.size(), 59);
     // EXPECT_EQ(patients[0].name, "John Wick");
     // EXPECT_EQ(patients[0].age, 35);
@@ -57,7 +58,7 @@ TEST(HW6Test, TEST5)
     // EXPECT_EQ(patients[58].area_q, 9);
     // EXPECT_EQ(patients[58].alkhol, 0);
 }
-/*
+
 TEST(HW6Test, TEST6) {
     std::vector<q2::Patient> patients = q2::read_file("lung_cancer.csv");
 
