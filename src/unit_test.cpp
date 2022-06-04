@@ -103,5 +103,3 @@ TEST(HW6Test, TEST9)
     EXPECT_NEAR(kalman.y, 0.4440, 0.01);
     // std::cout << kalman.x << ", " << kalman.y << std::endl;
 }
-/*
- */
