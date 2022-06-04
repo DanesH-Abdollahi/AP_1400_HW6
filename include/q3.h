@@ -58,7 +58,7 @@ static std::priority_queue<Flight, std::vector<Flight>, decltype(func)> gather_f
         std::regex pattern1(R"((\d+)h(\d+)?m?)"); // Pattern For Find Connection_Time For each Flight
         std::smatch match1;
 
-        while (std::regex_search(txt1, match1, pattern1)) { // Findind Connection_Time For each Flight
+        while (std::regex_search(txt1, match1, pattern1)) { // Finding Connection_Time For each Flight
 
             if (!match1[1].str().empty())
                 Totall_Conecction_Time += std::stoi(match1[1]) * 60;
