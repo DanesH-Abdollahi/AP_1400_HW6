@@ -1,5 +1,4 @@
 # Advanced Programming - HW6
-<p  align="center"> <b>Homework 6 - Spring 2022 Semester <br> Deadline: Thursday khordad 12th - 11:59 pm</b> </p>
 
 ## Outline
 In this homework, we are going to Solve 4 questions using functions in the C++ STL library. Read each question carefully and write down your code.
@@ -141,4 +140,3 @@ else
 return 0;
 ```
 <br/>
-<p  align="center"> <b>GOOD LUCK</b> </p>
